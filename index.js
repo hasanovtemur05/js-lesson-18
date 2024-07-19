@@ -74,11 +74,10 @@ function elementCounts(arr) {
 
 // 47 - masala    ////     Berilgan massiv ichida k indeksdagi elementni oxirgi indeksdagi element bilan almashtiring.
 function swapElements(arr, k) {
-    let res = arr.splice(k,1)
-    arr.push(+res.join(""))
+    arr.push(...arr.splice(k,1,arr.pop()))
     console.log(arr);
 }
-// swapElements([1, 2, 3, 4, 5], 2); // [1, 2, 5, 4, 3]
+swapElements([1, 2, 3, 4, 5], 2); // [1, 2, 5, 4, 3]
 
 
 
